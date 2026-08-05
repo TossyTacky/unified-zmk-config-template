@@ -67,32 +67,24 @@ keymap {
 		//&ec_ms_lとrは、上のビヘイビアで作ったもの。
         sensor-bindings = <&ec_ms_l SCRL_LEFT SCRL_RIGHT &ec_ms_r SCRL_DOWN SCRL_UP>;
     };
-    // default_layer {
-    //     bindings = <
-    //         &kp TAB    &kp Q   &kp W  &kp E  &kp R  &kp T      &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-    //         &kp LCTRL  &kp A   &kp S  &kp D  &kp F  &kp G      &kp H  &kp J  &kp K      &kp L    &kp SQT   &kp ENTER
-    //         &kp LSHFT  &kp Z   &kp X  &kp C  &kp V  &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH &kp LSHFT
-    //         &kp ESC    &kp LALT              &mo 2  &kp SPACE  &mo 1  &kp LA(GRAVE)              &mo 3     &kp LGUI
-    //     >;
-		// //&ec_ms_lとrは、上のビヘイビアで作ったもの。
-    //     sensor-bindings = <&ec_ms_l SCRL_LEFT SCRL_RIGHT &ec_ms_r SCRL_DOWN SCRL_UP>;
-    // };
-	
+
     layer_1 {
         bindings = <
-            &kp GRAVE &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &kp N6    &kp N7   &kp N8   &kp N9    &kp N0 &kp DEL
-            &trans    &trans &trans &trans &trans &trans           &kp PG_UP &kp HOME &kp UP   &kp END   &trans &trans
-            &trans    &trans &trans &trans &trans &trans           &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-            &trans    &trans               &trans &trans           &trans    &trans                      &trans &trans
+            &kp ESC   &kp Q    &kp W    &kp UP   &kp J     &kp I     &kp KP_COMMA &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS     &kp KP_MINUS
+            &kp LCTRL &lt 3 A  &kp LEFT &kp DOWN &kp RIGHT &kp COLON &kp KP_DOT   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MULTIPLY &kp KP_EQUAL
+            &kp LSHFT &kp Z    &kp X    &kp C    &kp V     &kp L     &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DIVIDE   &kp RSHFT
+            &Kp LALT  &kp LGUI                   &kp SPACE &lt 2 TAB &lt 2 BSPC   &kp ENTER                     &kp BSLH        &kp KP_NUMLOCK
         >;
+		//&ec_ms_lとrは、上のビヘイビアで作ったもの。
+        sensor-bindings = <&ec_ms_l SCRL_LEFT SCRL_RIGHT &ec_ms_r SCRL_DOWN SCRL_UP>;
     };
 
     layer_2 {
         bindings = <
-            &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &trans  &trans    &kp MINUS &kp EQUAL &trans     &trans
-            &trans &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &trans  &kp LBKT  &kp RBKT  &kp NUBS  &trans     &trans
-            &trans &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &trans  &kp SEMI  &kp SQT   &trans    &kp QMARK  &kp BSLH
-            &trans &trans                  &trans  &trans     &trans  &trans                        &trans     &trans
+            &kp ESC   &kp RSHFT N1 &kp RSHFT N2 &kp RSHFT N3 &kp RSHFT N4 &kp RSHFT N5 &kp LSHFT N6 &LSHFT N7 &kp LSHFT N8 &kp RSHFT N9 &kp RSHFT N0   &kp MINUS
+            &kp LCTRL &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7    &kp N8       &kp N9       &kp N0         &kp EQUAL
+            &kp LSHFT &none        &kp PIPE     &kp BSLH     &kp LBKT     &kp RBKT     &kp APOS     &kp SQT   &kp DQT      &LSHFT LBKT  &kp LSHFT RBKT &kp RSHFT
+            &kp LALT  &kp                                    &kp SPACE    &kp TAB      &kp BSPC     &kp ENTER                           &kp GRAVE      &none
         >;
 		//レイヤー2のときだけ、左手のエンコーダを回すとボリュームの上下ができるようになっています。
 		sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &ec_ms_r SCRL_DOWN SCRL_UP>;
@@ -101,10 +93,10 @@ keymap {
 
     layer_3 {
         bindings = <
-            &trans &trans &trans &trans &trans &trans      &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4
-            &trans &trans &trans &trans &trans &trans      &trans  &trans        &trans        &trans        &trans         &trans
-            &trans &trans &trans &trans &trans &trans      &trans  &trans        &trans        &trans        &bt BT_CLR_ALL &bt BT_CLR
-            &trans &trans               &trans &trans      &trans  &out OUT_BLE                                    &trans         &trans
+            &sys_reset &kp F1       &kp F2       &kp F3       &kp F4         &kp F5          &kp F6         &kp F7       &kp F8 &kp F9  &kp F10    &to 0
+            &kp LCTRL  &none        &none        &none        &bt BT_CLR_ALL &bt BT_CLR      &to 0          &to 1        &to 2  &none   &none      &kp F11
+            &kp LSHFT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &bt BT_SEL 4    &bt BT_SEL 5   &none        &none  &none   &none      &kp F12
+            &kp LALT   &kp                                    &kb RCTRL LEFT &kb RCTRL RIGHT &kb LCTRL LEFT &LCTRL RIGHT                &sys_reset &out OUT_BLE
         >;
     };
     scroll {
