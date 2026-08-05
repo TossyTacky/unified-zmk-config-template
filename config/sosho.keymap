@@ -79,10 +79,10 @@ keymap {
 
     layer_2 {
         bindings = <
-            &kp ESC   &kp RSHIFT N1 &kp RSHIFT N2 &kp RSHIFT N3 &kp RSHIFT N4 &kp RSHIFT N5 &kp RSHIFT N6 &kp RSHIFT N7 &kp RSHIFT N8 &kp RSHIFT N9 &kp RSHIFT N0  &kp MINUS
-            &kp LCTRL &lt 3 N1      &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp N7        &kp N8        &kp N9        &lt 3 N0       &kp EQUAL
-            &kp LSHFT &none         &kp PIPE      &kp BSLH      &kp LBKT      &kp RBKT      &kp APOS      &kp SQT       &kp DQT       &LSHIFT LBKT  &kp LSHFT RBKT &kp RSHFT
-            &kp LALT  &kp                                       &kp SPACE     &kp TAB       &kp BSPC      &kp ENTER                                 &kp GRAVE      &none
+            &kp ESC   &kp RSHIFT N1 &kp RSHIFT N2   &kp RSHIFT N3 &kp RSHIFT N4 &kp RSHIFT N5 &kp RSHIFT N6 &kp RSHIFT N7  &kp RSHIFT N8   &kp RSHIFT N9    &kp RSHIFT N0 &kp MINUS
+            &kp LCTRL &lt 3 N1      &kp N2          &kp N3        &kp N4        &kp N5        &kp N6        &kp N7         &kp N8          &kp N9           &lt 3 N0      &kp EQUAL
+            &kp LSHFT &none         &kp RSHIFT BSLH &kp BSLH      &kp LBKT      &kp RBKT      &kp SQT       &kp LSHIFT SQT &kp LSHIFT LBKT &kp LSHFT RBKT   &kp SLASH     &kp RSHFT
+            &kp LALT  &kp LGUI                                    &kp SPACE     &kp TAB       &kp BSPC      &kp ENTER                                       &kp GRAVE     &none
         >;
 		sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &ec_ms_r SCRL_DOWN SCRL_UP>;
     };
