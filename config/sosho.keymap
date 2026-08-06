@@ -20,15 +20,6 @@
   };
 };
 
-/{
-  behaviors {
-    &lt {
-      tapping-term-ms = <200>;
-      quick-tap-ms = <150>;
-    };
-  };
-};
-
 //スクロールの調整
 &msc {
     time-to-max-speed-ms = <0>;   // 即座に最大速度（加速なし）
