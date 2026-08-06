@@ -17,10 +17,10 @@
             compatible = "zmk,behavior-encoder-mouse-scroll";
             #sensor-binding-cells = <2>;
         };
-    };
-    &lt {
-      tapping-term-ms = <200>;
-      quick-tap-ms = <150>;
+        &lt {
+          tapping-term-ms = <200>;
+          quick-tap-ms = <150>;
+        };
     };
 };
 
