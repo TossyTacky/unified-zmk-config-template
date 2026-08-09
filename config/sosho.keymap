@@ -22,8 +22,10 @@
 
 //スクロールの調整
 &msc {
-  time-to-max-speed-ms = <0>;   // 即座に最大速度（加速なし）
-  acceleration-exponent = <0>;   // 加速なし
+  // time-to-max-speed-ms = <0>;   // 即座に最大速度（加速なし）Default
+  time-to-max-speed-ms = <500>;   // 500ms 低速度
+  // acceleration-exponent = <0>;   // 加速なし Default
+  acceleration-exponent = <2>;   // 直線加速 linier acceleration
 };
 
 /{
@@ -31,21 +33,24 @@
     compatible = "zmk,combos";
 	//左クリックのコンボ 19はJのキー 20はKのキーに相当します。
 	  combo_LCLK {
-      timeout-ms = <50>;
+      // timeout-ms = <50>; // Default
+      timeout-ms = <150>;
       key-positions = <19 20>;
       bindings = <&mkp LCLK>;
     };
 
 	  //右クリックのコンボ 20 K 21 L
     combo_RCLK {
-      timeout-ms = <50>;
+      // timeout-ms = <50>; // Default
+      timeout-ms = <150>;
       key-positions = <20 21>;
       bindings = <&mkp RCLK>;
     };
 
 	  //ホイールクリックのコンボ 19 J 21 L
 	  combo_MCLK {
-      timeout-ms = <90>;
+      // timeout-ms = <90>; // Default
+      timeout-ms = <200>;
       key-positions = <19 21>;
       bindings = <&mkp MCLK>;
     };
@@ -84,10 +89,10 @@
     };
     layer_3 {
       bindings = <
-        &kp ESC    &kp F1       &kp F2       &kp F3       &kp F4         &kp F5        &kp F6       &kp F7        &kp F8 &kp F9     &kp F10    &to 0
-        &kp LCTRL  &none        &sys_reset   &bt BT_CLR   &bt BT_CLR_ALL &bt BT_SEL 0  &to 0        &to 1         &to 2  &sys_reset &none      &kp F11
-        &kp LSHFT  &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2   &bt BT_SEL 1  &none        &none         &none  &kp KP_NUM &caps_word &kp F12
-        &kp LALT   &kp LGUI                               &kp RC(LEFT)   &kp RC(RIGHT) &kp LC(LEFT) &kp LC(RIGHT)                   &none      &out OUT_BLE
+        &kp ESC    &kp F1       &kp F2       &kp F3       &kp F4         &kp F5        &kp F6       &kp F7        &kp F8 &kp F9     &kp F10      &to 0
+        &kp LCTRL  &none        &sys_reset   &bt BT_CLR   &bt BT_CLR_ALL &bt BT_SEL 0  &to 0        &to 1         &to 2  &sys_reset &none        &kp F11
+        &kp LSHFT  &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2   &bt BT_SEL 1  &none        &none         &none  &kp KP_NUM &kt CAPSLOCK &kp F12
+        &kp LALT   &kp LGUI                               &kp RC(LEFT)   &kp RC(RIGHT) &kp LC(LEFT) &kp LC(RIGHT)                   &none        &out OUT_BLE
       >;
     };
     scroll {
