@@ -98,4 +98,11 @@ keymap {
         status = "reserved";
     };
 };
+
+&lt {
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;      // お好みの時間に変更 (125〜200 程度)
+    flavor = "tap-preferred";
+};   
+
 };
